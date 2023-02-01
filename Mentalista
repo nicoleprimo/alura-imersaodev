@@ -1,0 +1,80 @@
+<div class="container">
+  <h1 class="page-title">
+    Mentalista
+  </h1>
+  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+</div>
+<a href="https://alura.com.br/" target="_blank">
+  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+</a>
+
+body {
+    font-family: "Tahoma", monospace;
+    text-align: center;
+    background-image: url(https://images.wsj.net/im-514532/social);
+    background-color: #000000;
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  body > img {
+    margin: 0 10px;
+  }
+  
+  img {
+    max-height: 350px;
+  }
+
+  var numeroSecreto = parseInt(Math.random() * 1001);
+var tentativasRestantes = 10
+
+//enquanto a escolha for diferente do número secreto
+while(escolha != numeroSecreto) 
+{
+var escolha = prompt('Digite "X" para sair do jogo.\n' + 'Digite um número entre 1 e 1000: ')
+tentativasRestantes--
+//se a escolha for igual ao número secreto
+if  (escolha == numeroSecreto) {
+    alert('Acertou !')
+  } else if (escolha == 0) {
+  alert('Digite um número maior que zero. \n' + 'Restam ' + tentativasRestantes + '/10 tentativas.')
+  } else if (tentativasRestantes == 0) {
+      alert('Game Over ! :(') 
+    break
+  } else if (escolha > numeroSecreto) {
+    alert('Errou, o número secreto é menor que ' + escolha + '.\n' + 'Restam ' + tentativasRestantes + '/10 tentativas.')
+  } else if (escolha < numeroSecreto) {
+    alert('Errou, o número secreto é maior que ' + escolha + '.\n' + 'Restam ' + tentativasRestantes + '/10 tentativas.')
+  } else if(escolha==='x','X'){
+    alert('O número secreto era ' + numeroSecreto + '. Até a próxima !')
+    break
+  }        
+}
