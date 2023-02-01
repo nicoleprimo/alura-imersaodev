@@ -1,0 +1,78 @@
+<div class="container">
+  <h1 class="page-title">
+    Conversor de moedas
+  </h1>
+  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+</div>
+<a href="https://alura.com.br/" target="_blank">
+  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
+</a>
+
+body {
+    font-family: "Tahoma";
+    text-align: center;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 7 0 544px;
+  }
+  
+  .page-subtitle {
+    color: #fd0e35;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 240px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  body > img {
+    margin: 0 10px;
+  }
+  
+  img {
+    max-height: 200px;
+  }
+
+  alert("Olá! Vamos fazer a cotação?");
+var nome = prompt("Qual o seu nome?");
+
+//codigo da primeira aula sem alteração
+var valorEmDolar = 64;
+var cotacaoDoDolar = 5.32;
+var valorEmReal = valorEmDolar * cotacaoDoDolar;
+valorEmReal = valorEmReal.toFixed(2);
+alert(nome + ", o valor da cotação do dolar hoje é R$" + valorEmReal);
+
+//add outras moedas
+var valorEmLibraEsterlina = 1;
+var cotacaoDoLibraEsterlina = 6.27;
+var valorEmReal = valorEmLibraEsterlina * cotacaoDoLibraEsterlina;
+valorEmReal = valorEmReal.toFixed(2);
+alert(nome + ", o valor da cotação da Libra Esterlina hoje é R$" + valorEmReal);
+
+//Trocar moeda para criptomoeda
+var valorEmBitcoin = 2;
+var cotacaoDoBitcoin = 116080.16;
+var valorEmReal = valorEmBitcoin * cotacaoDoBitcoin;
+valorEmReal = valorEmReal.toFixed(2);
+alert(nome + ", o valor da cotação do BTC hoje é R$" + valorEmReal);
